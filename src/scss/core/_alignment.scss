@@ -1,0 +1,17 @@
+/*
+@description
+consists classes related to positioning of elements in application
+*/
+
+.p-center {
+    text-align: center;
+};
+.p-inline {
+    display:inline;
+    &-block {
+        display: inline-block;
+    }
+}
+.p-hide {
+    display: none;
+}

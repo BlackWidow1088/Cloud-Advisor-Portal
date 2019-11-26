@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>3CC3C860-C1D8-47B2-A815-26AB853D5FF2</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <circle id="path-1" cx="11" cy="11" r="11"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="22" height="22" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Stepped-Process:-Step-3-(User-Created)" transform="translate(-1199.000000, -395.000000)">
+            <g id="ico-Step-4" transform="translate(1199.000000, 395.000000)">
+                <use id="Oval-10" stroke="#003168" mask="url(#mask-2)" stroke-width="2" fill="#003168" xlink:href="#path-1"></use>
+                <g id="ico-edit2" transform="translate(2.750000, 2.750000)">
+                    <rect id="Rectangle-30" x="0" y="0" width="16.5" height="16.5"></rect>
+                    <path d="M4.09989201,11.788791 L4.09989201,9.97834068 L7.94910907,6.42407 L9.29292657,7.90204356 L5.85947624,11.788791 L4.09989201,11.788791 Z M10.0117441,4.56852668 L11.199649,5.74969408 L10.2742981,6.72895252 L9.03712203,5.49528879 L10.0117441,4.56852668 Z M13.12527,5.94352668 L9.93817495,2.75 L2.75,9.41030348 L2.75,13.1348507 L6.43790497,13.1348507 L13.12527,5.94352668 Z" id="edit-[#1483]" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

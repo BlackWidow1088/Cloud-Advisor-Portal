@@ -1,0 +1,90 @@
+<div class="p-lv-activity">
+  <div class="p-inline-block" style="height:2rem;">
+    <button type="button" pButton icon="pi pi-file-o" iconPos="left" label="CSV"
+      (click)="dt.exportCSV()">Export</button>
+  </div>
+  <div class="p-inline-block" style="float:right;height:2rem;">
+    <div class="p-inline-block">
+      <p-multiSelect [options]="listView.allColumns" [(ngModel)]="listView.selectedColumns" optionLabel="header"
+        defaultLabel="" selectedItemsLabel="" [displaySelectedLabel]="false" [showTransitionOptions]="'50ms'"
+        [hideTransitionOptions]="'50ms'" dropdownIcon="p-grid-column-ico-md" [style]="{minWidth:'150px', float: 'left',
+        marginRight: '0.8rem',
+        marginBottom: '0.2rem'}">
+      </p-multiSelect>
+    </div>
+    <app-search-box (onChange)="dt.filterGlobal($event, 'contains')"></app-search-box>
+    <!-- <p-menu [model]="columnViewItems"></p-menu> -->
+    <!-- <app-column-view [options]="listView.allColumns" (onChange)="onSelectedColumnsChange($event)"></app-column-view> -->
+  </div>
+</div>
+<p-table #dt [columns]="listView.selectedColumns" [value]="gridData" [scrollable]="true" [rows]="listView.pageSize/2"
+  scrollHeight="500px" [virtualScroll]="true" (onLazyLoad)="onLazyLoad($event)" [lazy]="true" [lazyLoadOnInit]="false"
+  [totalRecords]="totalRecords" [virtualRowHeight]="34" [filterDelay]="500" [dataKey]="listView.dataKey"
+  [resizableColumns]="true" columnResizeMode="expand" [style]="{width:'1300px'}" [(contextMenuSelection)]="selectedRow"
+  [contextMenu]="cm" contextMenuSelectionMode="joint">
+  <!-- header -->
+  <ng-template pTemplate="colgroup" let-columns>
+    <colgroup>
+      <col class="p-lv-headerless-col">
+      <col *ngFor="let col of columns" class="p-lv-col">
+      <col class="p-lv-headerless-col">
+    </colgroup>
+  </ng-template>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th class='p-lv-headerless-col'></th>
+      <th *ngFor="let col of columns" [pSortableColumn]="col.field" pResizableColumn>
+        {{col.header}}
+        <p-sortIcon [field]="col.field" ariaLabel="Activate to sort"
+          ariaLabelDesc="Activate to sort in descending order" ariaLabelAsc="Activate to sort in ascending order">
+        </p-sortIcon>
+      </th>
+      <th class='p-lv-headerless-col'></th>
+    </tr>
+  </ng-template>
+
+  <!-- body -->
+  <ng-template pTemplate="body" let-rowData let-expanded="expanded" let-columns="columns">
+    <tr [pSelectableRow]="rowData" [pContextMenuRow]="rowData" style="height:34px">
+      <td class="p-lv-headerless-col">
+        <a href="#" [pRowToggler]="rowData">
+          <i [ngClass]="expanded ? 'pi pi-chevron-down' : 'pi pi-chevron-right'"></i>
+        </a>
+      </td>
+      <td *ngFor="let col of columns" class="ui-resizable-column">
+        <span style="text-overflow: ellipsis;white-space: nowrap;">{{rowData[col.field]}}</span>
+      </td>
+      <td class="p-lv-headerless-col p-center">
+        <button pButton type="button" class="p-edit-ico-sm p-lv-delete-icon" (click)="onRowEditInit(rowData)"></button>
+        <button pButton type="button" class="p-delete-ico-sm p-lv-edit-icon"
+          (click)="onRowEditCancel(rowData, ri)"></button>
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="rowexpansion" let-rowData let-columns="columns">
+    <tr>
+      <td [attr.colspan]="columns.length + 1">
+        <div class="ui-g ui-fluid" style="font-size:16px;padding:20px">
+          <div class="ui-g-12 ui-md-12">
+            <div class="ui-g">
+              <div *ngFor="let col of columns;index as i;trackBy: trackByFn" class=" ui-g-12">
+                <div *ngIf="i > 3"><b>{{col.header}}</b> {{rowData[col.field]}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </ng-template>
+
+  <!-- loadingbody -->
+  <!-- <ng-template pTemplate="loadingbody" let-columns="columns">
+    <tr style="height:34px">
+      <td *ngFor="let col of columns">
+        <div class="p-lv-loading-text"></div>
+      </td>
+    </tr>
+  </ng-template> -->
+</p-table>
+
+<p-contextMenu #cm [model]="items"></p-contextMenu>

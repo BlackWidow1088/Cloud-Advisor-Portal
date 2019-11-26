@@ -1,0 +1,31 @@
+.p-sb-container {
+    display: inline;
+    position: relative;
+}
+.p-sb-parent {
+    display: inline-block;
+    position: relative;
+    width: 12.5rem;
+    height: 2rem;
+    line-height: 2rem;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.7;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(127, 153, 180);
+    border-radius: 5px;
+    text-align: right;
+}
+
+.p-sb-search-ico-layout {
+    float: left;
+}
+.p-sb-input {
+    display: inline-block;
+    width: 10rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: rgb(43, 62, 85);
+    outline-style: none;
+    border-color: transparent;
+}

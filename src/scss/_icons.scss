@@ -1,0 +1,58 @@
+.p-delete-ico {
+    cursor: pointer;
+    display: inline-block;
+    &-sm { 
+        width: $icon-size-small;
+        height: $icon-size-small;
+        background: url('assets/images/ico-delete-action.svg') no-repeat scroll center center;
+        background-size: $icon-size-small;
+    }
+};
+.p-edit-ico {
+    cursor: pointer;
+    display: inline-block;
+    &-sm { 
+        width: $icon-size-small;
+        height: $icon-size-small;
+        background: url('assets/images/ico-edit-action.svg') no-repeat scroll center center;
+        background-size: $icon-size-small;
+    }
+};
+.p-search-ico {
+    display: inline-block;
+    &-sm {
+        width: $icon-size-small;
+        height: $icon-size-small;
+        background: url('assets/images/ico-search.png') no-repeat scroll center center;
+        background-size: $icon-size-small;
+    };
+    &-md {
+        width: $icon-size-medium;
+        height: $icon-size-medium;
+        background: url('assets/images/ico-search.png') no-repeat scroll center center;
+        background-size: $icon-size-medium;
+    };
+}
+.p-grid-column-ico {
+    display: inline-block;
+    &-sm { 
+        width: $icon-size-small;
+        height: $icon-size-small;
+        background: url('assets/images/ico-grid-column-action.png') no-repeat scroll center center;
+        background-size: $icon-size-small;
+        &:hover {
+            background: url('assets/images/ico-grid-column-mouseover-action.png') no-repeat scroll center center;
+            background-size: $icon-size-small;
+        }
+    };
+    &-md { 
+        width: $icon-size-medium;
+        height: $icon-size-medium;
+        background: url('assets/images/ico-grid-column-action.png') no-repeat scroll center center;
+        background-size: $icon-size-medium;
+        &:hover {
+            background: url('assets/images/ico-grid-column-mouseover-action.png') no-repeat scroll center center;
+            background-size: $icon-size-medium;
+        }
+    }
+}

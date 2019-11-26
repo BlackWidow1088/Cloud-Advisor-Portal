@@ -1,0 +1,30 @@
+@import '../../../scss/variables';
+.p-lv-loading-text {
+    display: block;
+    background-color: #f1f1f1;
+    min-height: 19px;
+    animation: pulse 1s infinite ease-in-out;
+    text-indent: -99999px;
+    overflow: hidden;
+}
+
+.p-lv-headerless-col {
+    width: $table-headerless-col-width;
+}
+.p-lv-col {
+    width: $table-col-width;
+}
+
+.p-lv-delete-icon {
+    margin-left: 5px;
+    margin-bottom: 2.5px;
+    margin-right:2px;
+}
+.p-lv-edit-icon {
+    margin-left: 5px;
+    margin-bottom: 2.5px;
+    margin-right:2px;
+}
+.p-lv-activity {
+    margin-bottom: 1rem;
+}

@@ -1,0 +1,29 @@
+/*
+@description
+consists classes or html5 elements which modify default elements for application
+*/
+body {
+    // TODO: no solution as of now. have overridden the defualt property of <p-multiselect>
+ & .ui-multiselect {
+     border:none;
+ };
+ & .ui-table .ui-table-tbody > tr > td {
+     text-overflow: ellipsis;
+ }
+}
+button {
+    background-color: rgb(224, 224, 224);
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 1px 5px;
+    border-style: none;
+    cursor: pointer;
+}
+.p-search-input {
+    width: 150px;
+    height: 25px;
+    line-height: 25px;
+    color: rgb(43, 62, 85);
+    outline-style: none;
+    border-color: transparent;
+}
